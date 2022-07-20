@@ -501,7 +501,7 @@ def PlotTrueCorr(dict_list, title_note=r"(with noise $\sigma_1=\sigma_2=0.15$)")
     ax = sns.swarmplot(x="corr_type", y="corr", data=corr_df, color=".25")
 
     ax.set_xlabel("Correlation type")
-    ax.set_xlabel("Correlation value")
+    ax.set_ylabel("Correlation value")
     ax.set_title("True surface correlation\n" + title_note)
 
     plt.show()
