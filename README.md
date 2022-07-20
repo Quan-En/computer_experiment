@@ -34,7 +34,7 @@ Mainly component in our tuning procedures:
 
 - Case1: highly correlated
     <p align="center">
-    <img src="fig/numerical_c1_pf_scatter.png" width="£¾300">
+    <img src="fig/numerical_c1_pf_scatter.png" width="350">
     </p>
     Data generating
 
@@ -43,7 +43,9 @@ Mainly component in our tuning procedures:
     ```
 - Case2: slightly correlated
     <p align="center">
-    <img src="fig/numerical_c2_pf_scatter.png" width="£¾300">
+    <br >
+    <img src="fig/numerical_c2_pf_scatter.png" width="350">
+    <br >
     </p>
     Data generating
 
@@ -63,7 +65,13 @@ Mainly component in our tuning procedures:
         - Optimizer: 5-levels
     - Quantitative factors:
         - Learning rate
-    
+
+    <p align="center">
+    <br >
+    <img src="fig/real_c1_scatter.png" width="500">
+    <br >
+    </p>
+
     ```r
     python3 real_experiment/case1.py --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
     ```
@@ -76,6 +84,12 @@ Mainly component in our tuning procedures:
         - Learning rate
         - Decay rate (lower)
     
+    <p align="center">
+    <br >
+    <img src="fig/real_c2_scatter.png" width="500">
+    <br >
+    </p>
+
     ```r
     python3 real_experiment/case2.py --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
     ```
