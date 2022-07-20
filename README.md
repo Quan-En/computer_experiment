@@ -1,10 +1,19 @@
 # Computer Experiment
 
+## Introduction
 This project mainly focuses on surrogate-assisted tuning procedures for qualitative and quantitative factors in multiple response models with noises. Basically, a surrogate-assistant approach iterates the following two steps until a stop criterion is met. First based on the current explored points, a surrogate surface is constructed and then due to the surrogate model, an infill criterion is adopted to identify the next explored point.
 
 Mainly component in our tuning procedures:
 - Surrogate model (multi-output Gaussian process based)
 - Infill criteria (hypervolume-based expected improvement)
+
+## Methods
+### Multi-output Gaussian process model
+- Multi-objective Gaussian process with qualitative and quantitative factors (MOQQGP)
+- Multi-task Gaussian process with qualitative and quantitative factors (MTQQGP)
+### Expected hypervolume improvement
+- Observed-based (OEHVI)
+- Posterior-based (PEHVI)
 
 # Metrics generating
 
