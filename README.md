@@ -34,11 +34,13 @@ Mainly component in our tuning procedures:
 
 - Case1: highly correlated\
     data generating:
+
     ```r
     python3 numerical_experiment/case1.py --GridSize --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
     ```
 - Case2: slightly correlated\
     data generating:
+
     ```r
     python3 numerical_experiment/case1.py --GridSize --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
     ```
@@ -55,6 +57,7 @@ Mainly component in our tuning procedures:
         - Optimizer: 5-levels
     - Quantitative factors:
         - Learning rate
+    
     ```r
     python3 real_experiment/case1.py --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
     ```
@@ -66,6 +69,16 @@ Mainly component in our tuning procedures:
     - Quantitative factors:
         - Learning rate
         - Decay rate (lower)
+    
     ```r
     python3 real_experiment/case2.py --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
     ```
+
+## Results
+
+### Numerical experiment
+
+- `summary_result/numerical_case1.ipynb`
+- `summary_result/numerical_case2.ipynb`
+
+### Real experiment
