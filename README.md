@@ -1,19 +1,48 @@
 # Computer Experiment
 
+
+
+# Metrics generating
+
 ```r
 python3 resnet_data_generate_process.py --algorithm --weighted --lr --low_beta --up_beta --momentum
 ```
-
-
-`parser.add_argument("--algorithm", "-a", type=str, nargs='?', default="Adam", choices=["Adam", "Adamax", "NAdam", "SGD", "RMSprop"] ,help="Optimizer")`
-
-`parser.add_argument("--weighted", "-w", type=bool, nargs='?', default=True, help="Use weighted loss function")`
-
-`parser.add_argument("--lr", "-l", type=float, nargs='?', default=0.001, help="Learning rate")`
-
-`parser.add_argument("--low_beta", "-lb", type=float, nargs='?', default=0.9, help="Decay rate (lower)")`
-
-`parser.add_argument("--up_beta", "-ub", type=float, nargs='?', default=0.999, help="Decay rate (upper)")`
-
-`parser.add_argument("--momentum", "-m", type=float, nargs='?', default=0.9, help="Momentum in SGD")`
  
+# Numerical experiment
+
+## Case1: highly correlated
+
+```r
+python3 numerical_experiment/case1.py --GridSize --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
+```
+
+## Case2: slightly correlated
+```r
+python3 numerical_experiment/case2.py --GridSize --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
+```
+
+# Real experiment
+
+## Case1
+
+- Qualitative factors:
+    - Optimizer: 5-levels
+- Quantitative factors:
+    - Learning rate
+
+```r
+python3 real_experiment/case1.py --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
+```
+
+## Case2
+
+- Qualitative factors:
+    - Optimizer: 2-levels
+    - Weighted loss: 2-levels
+- Quantitative factors:
+    - Learning rate
+    - Decay rate (lower)
+
+```r
+python3 real_experiment/case2.py --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
+```
