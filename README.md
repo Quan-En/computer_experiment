@@ -32,13 +32,19 @@ Mainly component in our tuning procedures:
 ## Materials
 ### Numerical experiment
 
-- Case1: highly correlated\
+- Case1: highly correlated
+    <p align="center">
+    <img src="fig/numerical_c1_pf_scatter.png" width="£¾300">
+    </p>
     Data generating
 
     ```r
     python3 numerical_experiment/case1.py --GridSize --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
     ```
-- Case2: slightly correlated\
+- Case2: slightly correlated
+    <p align="center">
+    <img src="fig/numerical_c2_pf_scatter.png" width="£¾300">
+    </p>
     Data generating
 
     ```r
