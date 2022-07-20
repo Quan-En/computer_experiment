@@ -5,7 +5,7 @@ This project mainly focuses on surrogate-assisted tuning procedures for qualitat
 
 Mainly component in our tuning procedures:
 - Initial design (sliced Latin hypercube design)
-- Surrogate model (multi-output Gaussian process based)
+- Surrogate model (multi-output Gaussian process)
 - Infill criteria (hypervolume-based expected improvement)
 
 ## Methods
