@@ -15,13 +15,13 @@ Mainly component in our tuning procedures:
 - Multi-objective Gaussian process with qualitative and quantitative factors (`model/MOQQGP.py`)
 
 <p align="center">
-  <img src="model_fig/moqqgp_structure.png" width="250">
+  <img src="fig/moqqgp_structure.png" width="250">
 </p>
 
 - Multi-task Gaussian process with qualitative and quantitative factors (`model/MTQQGP.py`)
 
 <p align="center">
-  <img src="model_fig/mtqqgp_structure.png" width="250">
+  <img src="fig/mtqqgp_structure.png" width="250">
 </p>
 
 ### Expected hypervolume improvement
@@ -33,13 +33,13 @@ Mainly component in our tuning procedures:
 ### Numerical experiment
 
 - Case1: highly correlated\
-    data generating:
+    Data generating
 
     ```r
     python3 numerical_experiment/case1.py --GridSize --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
     ```
 - Case2: slightly correlated\
-    data generating:
+    Data generating
 
     ```r
     python3 numerical_experiment/case1.py --GridSize --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
