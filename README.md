@@ -9,9 +9,10 @@ Mainly component in our tuning procedures:
 
 ## Methods
 ### Multi-output Gaussian process model
-- Multi-objective Gaussian process with qualitative and quantitative factors (MOQQGP)
-- Multi-task Gaussian process with qualitative and quantitative factors (MTQQGP)
+- Multi-objective Gaussian process with qualitative and quantitative factors (`model/MOQQGP.py`)
+- Multi-task Gaussian process with qualitative and quantitative factors (`model/MTQQGP.py`)
 ### Expected hypervolume improvement
+`utils/EHVI.py`
 - Observed-based (OEHVI)
 - Posterior-based (PEHVI)
 
