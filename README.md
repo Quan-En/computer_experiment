@@ -66,7 +66,7 @@ We repeat each experiment 20 times by independently generating the initial point
 
 - Data (metrics) generating
     ```r
-    python3 numerical_experiment/case1.py ---algorithm --weighted --lr --low_beta --up_beta --momentum
+    python3 resnet_data_generate_process.py ---algorithm --weighted --lr --low_beta --up_beta --momentum
     ```
 
     - Case1
