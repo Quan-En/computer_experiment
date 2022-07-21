@@ -31,71 +31,88 @@ Mainly component in our tuning procedures:
 
 ## Materials
 ### Numerical experiment
-
+We repeat each experiment 20 times by independently generating the initial points. Finally, we store the experimental data (each step) about the computation time, the change of the maximum EI value, and the contribution ratio (compared to the real Pareto set).
 - Case1: highly correlated
-    <p align="center">
-    <img src="fig/numerical_c1_pf_scatter.png" width="350">
-    </p>
-    Data generating
+
+    Experiment result generating
 
     ```r
     python3 numerical_experiment/case1.py --GridSize --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
     ```
+
+    Scatter plot
+    <p align="center">
+    <br >
+    <img src="fig/numerical_c1_pf_scatter.png" width="350">
+    <br >
+    </p>
+
 - Case2: slightly correlated
+
+    Experiment result generating
+
+    ```r
+    python3 numerical_experiment/case2.py --GridSize --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
+    ```
+
+    Scatter plot
     <p align="center">
     <br >
     <img src="fig/numerical_c2_pf_scatter.png" width="350">
     <br >
     </p>
-    Data generating
-
-    ```r
-    python3 numerical_experiment/case1.py --GridSize --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
-    ```
 
 ### Real experiment
 
 - Data (metrics) generating
     ```r
-    python3 numerical_experiment/case1.py --GridSize --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
+    python3 numerical_experiment/case1.py ---algorithm --weighted --lr --low_beta --up_beta --momentum
     ```
 
+    - Case1
+        - Qualitative factors:
+            - Optimizer: 5-levels
+        - Quantitative factors:
+            - Learning rate
+
+        <p align="center">
+        <br >
+        <img src="fig/real_c1_scatter.png" width="500">
+        <br >
+        </p>
+
+    - Case2
+        - Qualitative factors:
+            - Optimizer: 2-levels
+            - Weighted loss: 2-levels
+        - Quantitative factors:
+            - Learning rate
+            - Decay rate (lower)
+        
+        <p align="center">
+        <br >
+        <img src="fig/real_c2_scatter.png" width="500">
+        <br >
+        </p>
+
+We repeat each experiment 20 times by independently generating the initial points. Finally, we store the experimental data (each step) about the computation time, the change of the maximum EI value, and the contribution ratio (compared to the real Pareto set).
+
 - Case1
-    - Qualitative factors:
-        - Optimizer: 5-levels
-    - Quantitative factors:
-        - Learning rate
 
-    <p align="center">
-    <br >
-    <img src="fig/real_c1_scatter.png" width="500">
-    <br >
-    </p>
-
+    Experiment result generating
     ```r
     python3 real_experiment/case1.py --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
     ```
 
 - Case2
-    - Qualitative factors:
-        - Optimizer: 2-levels
-        - Weighted loss: 2-levels
-    - Quantitative factors:
-        - Learning rate
-        - Decay rate (lower)
-    
-    <p align="center">
-    <br >
-    <img src="fig/real_c2_scatter.png" width="500">
-    <br >
-    </p>
 
+    Experiment result generating
     ```r
     python3 real_experiment/case2.py --RandomSeed --SampleSize --ModelName --NoiseSigma --PosteriorPateto
     ```
 
 ## Results
-
+Analyze results from (numerical / real) experiments with descriptive statistics
 ### Numerical experiment
 
 - `summary_result/numerical_case1.ipynb`
