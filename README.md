@@ -1,4 +1,4 @@
-# Computer Experiment
+# Computer Experiment: Surrogate-Assisted Tuning Procedure With Qualitative and Quantitative Factors for Multiple Responses
 
 ## Introduction
 This project mainly focuses on surrogate-assisted tuning procedures for qualitative and quantitative factors in multiple response models with noises. Basically, a surrogate-assistant approach iterates the following two steps until a stop criterion is met. First based on the current explored points, a surrogate surface is constructed and then due to the surrogate model, an infill criterion is adopted to identify the next explored point.
